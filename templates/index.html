@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Algotrader - Homepage</title>
+		<script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+  </head>
+	<body>
+		<section>
+			<nav>
+				<ul class="topnav">
+					<li><a class="active" href="http://localhost:5000/">Algotrader</a></li>
+	
+					<li><a  href="http://localhost:5000/cryptocurrency"> Cryptocurrency </a></li> 
+					<li><a href="http://localhost:5000/Contact">Contact</a></li>
+					<li style="float:right"><a href="http://localhost:5000/APIlogin">Account</a></li>
+				</ul>
+			</nav>
+		</section>
+
+		<section>
+            <div class="center">
+                <h1 class="homepage-box-title">Welcome, to <br> Algotrader</h1>
+                <a href="http://localhost:5000/APIlogin" class="button">Demo Account</a>
+            </div>
+        </section>
+
+        <section>
+			<div class="homepagechart-border">
+                <div class="homepagechart-text">
+                    <h1 class="homepage-heading">GDP/USDT</h1>
+					<div id="chart"></div>
+                </div>
+            </div>
+		</section>
+
+		
+
+		<footer class="footercontent">
+			<p> Algotrader © 2022</p>
+		</footer>
+
+
+		
+
+		<script>var tradeDiv = document.getElementById('trades')</script>
+        <script src="{{ url_for('static', filename='index.js') }}"></script>
+		
+	</body>
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #2A2B2DFF; /* Main colour of thbe nav bar*/
+    }
+  
+    ul.topnav li {float: left;}
+      
+    ul.topnav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+      
+    ul.topnav li a:hover:not(.active) {
+        background-color: #2DA8D8FF;
+    }
+      
+    ul.topnav li a.active {
+        background-color: #D9514EFF;
+    }
+      
+    ul.topnav li.right {
+        float: right;
+    }
+      
+    @media screen and (max-width: 600px) {
+        ul.topnav li.right, 
+        ul.topnav li {float: none;}
+
+    }
+
+    .center {
+        padding: 70px 0;
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        border: 3px solid #2A2B2DFF;
+        padding: 10px;
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+	
+	.homepage-box-title{
+		font-size: 60pt;
+		font-weight: 500;
+		color: black;
+		margin-bottom: 20px;
+	}
+    .homepage-heading{
+        font-size: 24pt;
+        color: black;
+    }
+
+    .button {
+		background-color: #5995fd;
+		border-radius: 49px;
+		padding: 10px 30px;
+		color: white;
+		margin-top: 100px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 15pt;
+		margin: 0 15px;
+		cursor: pointer;
+		transition: 0.5s;
+	}
+
+	.button:hover{
+		background-color: #4d84e2;
+	}
+
+    .footercontent{
+        font-size: 16pt;
+        font-weight: 500;
+        text-align: center;
+        width: 100%;
+        color: black;
+	}
+
+   
+
+
+</style>

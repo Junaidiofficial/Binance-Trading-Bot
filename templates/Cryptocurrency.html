@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Algotrader - Cryptocurrency</title>
+  </head>
+  <body>
+
+	<section>
+		<nav>
+			<ul class="topnav">
+				<li><a  href="http://localhost:5000/">Algotrader</a></li>
+
+				<li><a class="active" href="http://localhost:5000/cryptocurrency"> Cryptocurrency </a></li> 
+				<li><a href="http://localhost:5000/Contact">Contact</a></li>
+				<li id="navside"><a href="http://localhost:5000/APIlogin">Account</a></li>
+			</ul>
+		</nav>
+	</section>
+
+	<section>
+		<div>
+			<h1> Cryptocurrency (USDT)</h1>
+			
+
+			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Cryptocurrency names..">
+
+			<ul id="tradinglisit">
+				<li><a href="http://localhost:5000/BTC_USDT">Bitcoin</a></li>
+				<li><a href="http://localhost:5000/ETH_USDT">Ethereum</a></li>
+				<li><a href="http://localhost:5000/ADA_USDT">Cardano</a></li>
+				<li><a href="http://localhost:5000/DOGE_USDT">Dogecoin</a></li>
+				<li><a href="http://localhost:5000/XRP_USDT">Ripple</a></li>
+				<li><a href="http://localhost:5000/USD_USDT">USD Coin</a></li>
+				<li><a href="http://localhost:5000/DOT_USDT">Polkadot</a></li>
+				<li><a href="http://localhost:5000/BNB_USDT">Binance Coin</a></li>
+				<li><a href="http://localhost:5000/UNI_USDT">Uniswap</a></li>
+				<li><a href="http://localhost:5000/BCH_USDT">Bitcoin Cash</a></li>
+				<li><a href="http://localhost:5000/LTC_USDT">Litecoin</a></li>
+				<li><a href="http://localhost:5000/SOL_USDT">Solana</a></li>
+				<li><a href="http://localhost:5000/LINK_USDT">Chainlink</a></li>
+				<li><a href="http://localhost:5000/MATIC_USDT">Polygon</a></li>
+				<li><a href="http://localhost:5000/THETA_USDT">Theta Token</a></li>
+				<li><a href="http://localhost:5000/XLM_USDT">Stellar Lumens</a></li>
+				<li><a href="http://localhost:5000/VET_USDT">Vechain</a></li>
+				<li><a href="http://localhost:5000/TRX_USDT">Tron</a></li>
+				<li><a href="http://localhost:5000/XMR_USDT">Monero</a></li>
+				<li><a href="http://localhost:5000/SHIBA_USDT">Shiba Inu</a></li> 
+				<li><a href="http://localhost:5000/ATOM_USDT">Cosmos</a></li>
+				<li><a href="http://localhost:5000/CAKE_USDT">PancakeSwap</a></li>
+				<li><a href="http://localhost:5000/FTT_USDT">Ftx Token</a></li>
+				<li><a href="http://localhost:5000/KLAY_USDT">Klaytn</a></li>
+				<li><a href="http://localhost:5000/XTZ_USDT">Tezos</a></li>
+				<li><a href="http://localhost:5000/MKR_USDT">Maker</a></li>
+				<li><a href="http://localhost:5000/TFUEL_USDT">Theta Fuel</a></li> 
+				<li><a href="http://localhost:5000/AVAX_USDT">Avalanche</a></li>
+				<li><a href="http://localhost:5000/DCR_USDT">Decred</a></li>
+				<li><a href="http://localhost:5000/WAVES_USDT">Waves</a></li>
+				<li><a href="http://localhost:5000/KSM_USDT">Kusama</a></li>
+				<li><a href="http://localhost:5000/GRT_USDT">The Graph</a></li>
+				<li><a href="http://localhost:5000/FIL_USDT">Filecoin</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<footer>
+		<p style="text-align:center"> Algotrader © 2022</p>
+	</footer>
+	
+  </body>
+</html>
+
+
+<script>
+	function myFunction() {
+	  // Declare variables
+	  var input, filter, ul, li, a, i, txtValue;
+	  input = document.getElementById('myInput');
+	  filter = input.value.toUpperCase();
+	  ul = document.getElementById("tradinglisit");
+	  li = ul.getElementsByTagName('li');
+	
+	  // Loop through all list items, and hide those who don't match the search query
+	  for (i = 0; i < li.length; i++) {
+		a = li[i].getElementsByTagName("a")[0];
+		txtValue = a.textContent || a.innerText;
+		if (txtValue.toUpperCase().indexOf(filter) > -1) {
+		  li[i].style.display = "";
+		} else {
+		  li[i].style.display = "none";
+		}
+	  }
+	}
+</script>
+
+
+<style>
+	body {margin: 0;}
+
+/* Nav bar for webpages */
+	ul.topnav {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: #2A2B2DFF; /* Main colour of thbe nav bar*/
+	}
+	
+	ul.topnav li {float: left;}
+	
+	ul.topnav li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	}
+	
+	#navside{
+		float:right
+	}
+
+	ul.topnav li a:hover:not(.active) {background-color: #2DA8D8FF;}
+	
+	ul.topnav li a.active {background-color: #D9514EFF;}
+	
+	ul.topnav li.right {float: right;}
+	
+	@media screen and (max-width: 600px) {
+	  ul.topnav li.right, 
+	  ul.topnav li {float: none;}
+
+	  #navside{
+		  float: none;
+	}
+	  
+	}
+
+/* crytocurrency trading search list */
+    #myInput {
+		/* background-image: url(''); /* Add a search icon */
+		/* background-position: 10px 12px; /* Position the search icon */
+		/* background-repeat: no-repeat; /* Do not repeat the icon image */
+		width: 80%; 
+		font-size: 16px;
+		padding: 12px 20px 12px 40px; 
+		border: 1px solid black; 
+		margin-bottom: 12px;
+	  }
+	  
+	  #tradinglisit {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	  }
+	  
+	  #tradinglisit li a {
+		border: 1px solid #ddd; 
+		margin-top: -1px;
+		background-color: #f6f6f6; /* background color */
+		padding: 12px; /* Add some padding */
+		text-decoration: none; 
+		font-size: 18px; 
+		color: black; 
+		display: block; /* Make it into a block element to fill the whole list */
+	  }
+	  
+	  #tradinglisit li a:hover:not(.header) {
+		background-color: #2DA8D8FF; /* Add a hover effect to all links, except for headers */
+	  }
+
+</style>
